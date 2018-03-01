@@ -1,0 +1,958 @@
+********************************************************************************
+*                         FREEZE-AND-THAW CALCULATION                          *
+********************************************************************************
+
+================================== Input File ==================================
+
+
+subsystem
+He                 0.0   0.0    0.0
+end
+
+subsystem
+He                 3.0    0.0    0.0
+He                 6.0    0.0    0.0
+end
+
+wfembed
+ cycles 10
+ conv 1e-6
+ natorb
+end
+
+embed
+ huzinaga
+ cycles 300
+ conv 1e-8
+ method m06
+end
+
+basis cc-pVDZ
+method cas[2,2]
+grid 4
+compden dft
+conv 1e-9
+grad 1e-8
+maxiter 300
+================================== End Input ===================================
+tot grids = 38340
+
+                      Getting subsystem overlap integrals                       
+
+                          Initial subsystem densities                           
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+Guessing initial subsystem densities
+Initial guess from superpostion of atomic densties.
+[array([[ 0.7023881 ,  0.60805601,  0.        ,  0.        ,  0.        ],
+       [ 0.60805601,  0.52639291,  0.        ,  0.        ,  0.        ],
+       [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ],
+       [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ],
+       [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ]]), array([[  7.02388095e-01,   6.08056009e-01,  -6.63340329e-23,
+          0.00000000e+00,   0.00000000e+00,   8.88978019e-19,
+          8.99719442e-19,  -4.14487823e-20,   0.00000000e+00,
+          0.00000000e+00],
+       [  6.08056009e-01,   5.26392905e-01,  -5.74252433e-23,
+          0.00000000e+00,   0.00000000e+00,  -1.55630415e-18,
+         -1.23463368e-18,  -3.58821303e-20,   0.00000000e+00,
+          0.00000000e+00],
+       [ -6.63340329e-23,  -5.74252433e-23,   5.48927663e-38,
+          0.00000000e+00,   0.00000000e+00,  -1.96356872e-19,
+         -1.69985763e-19,   2.05688865e-40,   0.00000000e+00,
+          0.00000000e+00],
+       [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+          0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+          0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+          0.00000000e+00],
+       [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+          0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+          0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+          0.00000000e+00],
+       [  8.88978019e-19,  -1.55630415e-18,  -1.96356872e-19,
+          0.00000000e+00,   0.00000000e+00,   7.02388095e-01,
+          6.08056009e-01,  -7.21767177e-22,   0.00000000e+00,
+          0.00000000e+00],
+       [  8.99719442e-19,  -1.23463368e-18,  -1.69985763e-19,
+          0.00000000e+00,   0.00000000e+00,   6.08056009e-01,
+          5.26392905e-01,  -6.24832443e-22,   0.00000000e+00,
+          0.00000000e+00],
+       [ -4.14487823e-20,  -3.58821303e-20,   2.05688865e-40,
+          0.00000000e+00,   0.00000000e+00,  -7.21767177e-22,
+         -6.24832443e-22,   2.44668512e-39,   0.00000000e+00,
+          0.00000000e+00],
+       [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+          0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+          0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+          0.00000000e+00],
+       [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+          0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+          0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+          0.00000000e+00]])]
+
+========================== Starting WFT-in-DFT Cycles ==========================
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:1        |ddm|: 5.400455e-03     Tr[DP]  3.158365e-05
+ iter:   1:2        |ddm|: 1.179204e-02     Tr[DP]  3.177205e-05
+ iter:   2:1        |ddm|: 9.634716e-04     Tr[DP]  3.175608e-05
+ iter:   2:2        |ddm|: 1.401236e-03     Tr[DP]  3.172220e-05
+ iter:   3:1        |ddm|: 1.462233e-04     Tr[DP]  3.172463e-05
+ iter:   3:2        |ddm|: 2.105826e-04     Tr[DP]  3.172976e-05
+ iter:   4:1        |ddm|: 7.704604e-08     Tr[DP]  3.172976e-05
+ iter:   4:2        |ddm|: 8.135825e-07     Tr[DP]  3.172975e-05
+ iter:   5:1        |ddm|: 2.807230e-09     Tr[DP]  3.172975e-05
+ iter:   5:2        |ddm|: 1.718094e-08     Tr[DP]  3.172975e-05
+ iter:   6:1        |ddm|: 2.425827e-10     Tr[DP]  3.172975e-05
+ iter:   6:2        |ddm|: 2.148789e-10     Tr[DP]  3.172975e-05
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 4.181173e-03
+  subiter:   2      |ddm|: 3.165453e-04
+  subiter:   3      |ddm|: 2.593779e-05
+  subiter:   4      |ddm|: 5.311627e-10
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpLeGOA2
+max_memory 4000 MB (current use 65 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -2.85518686912764
+  HOMO = -0.914171380206591  LUMO = 1.39734612690951
+cycle= 1 E= -2.85518686912764  delta_E=    0  |g|= 4.61e-11  |ddm|= 4.23e-10
+  HOMO = -0.914171380134478  LUMO = 1.39734612696766
+Extra cycle  E= -2.85518686912764  delta_E=    0  |g|= 4.09e-12  |ddm|= 3.25e-11
+converged SCF energy = -2.85518686912764
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpwcH1kR
+max_memory 4000 MB (current use 65 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x2145578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x2145410>
+init E= -2.89887562310048
+  HOMO = -0.661705256530255  LUMO = 1.12805651824289
+cycle= 1 E= -2.89887562310048  delta_E=    0  |g|= 1.16e-11  |ddm|= 6.65e-11
+  HOMO = -0.661705256511719  LUMO = 1.12805651826013
+Extra cycle  E= -2.89887562310048  delta_E=    0  |g|= 2.06e-12  |ddm|= 1.19e-11
+converged SCF energy = -2.89887562310048
+ iter:   7:1        |ddm|: 4.523656e-03     Tr[DP]  3.157497e-05
+
+******** <class 'pyscf.mcscf.mc1step.CASSCF'> flags ********
+CAS (1e+1e, 2o), ncore = 0, nvir = 3
+max_cycle_macro = 150
+max_cycle_micro = 4
+conv_tol = 1e-07
+conv_tol_grad = None
+orbital rotation max_stepsize = 0.02
+augmented hessian ah_max_cycle = 30
+augmented hessian ah_conv_tol = 1e-12
+augmented hessian ah_linear dependence = 1e-14
+augmented hessian ah_level shift = 0
+augmented hessian ah_start_tol = 2.5
+augmented hessian ah_start_cycle = 3
+augmented hessian ah_grad_trust_region = 3
+kf_trust_region = 3
+kf_interval = 4
+ci_response_space = 4
+ci_grad_trust_region = 3
+with_dep4 0
+natorb = False
+canonicalization = True
+sorting_mo_energy = False
+chkfile = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpLeGOA2
+max_memory 4000 MB (current use 80 MB)
+internal_rotation = False
+******** <class 'pyscf.fci.direct_spin1.FCISolver'> flags ********
+max. cycles = 50
+conv_tol = 1e-08
+davidson only = False
+linear dependence = 1e-10
+level shift = 0.001
+max iter space = 12
+max_memory 4000 MB
+nroots = 1
+pspace_size = 400
+spin = None
+CASCI E = -2.87018472568708  S^2 = 0.0000000
+Set conv_tol_grad to 0.000316228
+macro iter 1 (1 JK  1 micro), CASSCF E = -2.87018472568708  dE = 1.3322676e-15  S^2 = 0.0000000
+               |grad[o]|=3.61e-08  |grad[c]|= 1.8065835376e-15  |ddm|=6.27e-15
+1-step CASSCF converged in 1 macro (1 JK 1 micro) steps
+CASSCF canonicalization
+CASSCF energy = -2.87018472568708
+Hartree-Fock Energy:    -2.85518686912764
+CAS Correlation:       -0.01499785655944
+CAS Energy:            -2.87018472568708
+
+============================== Supermolecular DFT ==============================
+  subiter:   1      |ddm|: 8.884512e-03
+  subiter:   2      |ddm|: 1.921371e-04
+  subiter:   3      |ddm|: 5.571173e-06
+  subiter:   4      |ddm|: 4.637031e-07
+  subiter:   5      |ddm|: 1.711226e-08
+  subiter:   6      |ddm|: 7.083605e-11
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpUpW613
+max_memory 4000 MB (current use 82 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x2145578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x2145410>
+init E= -8.69688457466953
+  HOMO = -0.659418743175492  LUMO = 1.09674936223191
+cycle= 1 E= -8.69688457466953  delta_E=    0  |g|= 9.64e-12  |ddm|= 5.77e-11
+  HOMO = -0.659418743173714  LUMO = 1.09674936223337
+Extra cycle  E= -8.69688457466954  delta_E= -3.55e-15  |g|= 1.68e-12  |ddm|= 9.88e-12
+converged SCF energy = -8.69688457466954
+Supermolecular DFT     -8.69688457466954
+
+========================= Density Matrix Purification ==========================
+
+============================== Compare Densities ===============================
+Delta Density          0.00000429663459
+WF-in-DFT Cycle Errors             0.03605451886679
+
+============================== Embedding Energies ==============================
+Subsystem DFT                -2.89887562310048
+Interaction                  -5.79800891600276
+DFT-in-DFT                   -8.69688453910325
+Supermolecular DFT           -8.69688457466954
+Difference                   -0.00000003556629
+Corrected DFT-in-DFT         -8.69688457466954
+WF-in-DFT                    -8.66819364168984
+Corrected WF-in-DFT          -8.66819367725613
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 9.504138e-07     Tr[DP]  3.221769e-05
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP]  3.221769e-05
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 2.469610e-02
+  subiter:   2      |ddm|: 6.638940e-05
+  subiter:   3      |ddm|: 5.043281e-06
+  subiter:   4      |ddm|: 3.899565e-07
+  subiter:   5      |ddm|: 4.100986e-13
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpfzadxc
+max_memory 4000 MB (current use 82 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -2.85304510596549
+  HOMO = -0.913216592411067  LUMO = 1.4004871272887
+cycle= 1 E= -2.85304510596549  delta_E= 4.44e-16  |g|= 1.27e-13  |ddm|= 3.48e-13
+  HOMO = -0.913216592411079  LUMO = 1.40048712728869
+Extra cycle  E= -2.85304510596549  delta_E=    0  |g|= 1.52e-14  |ddm|= 4.12e-14
+converged SCF energy = -2.85304510596549
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpwcH1kR
+max_memory 4000 MB (current use 82 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x2145578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x2145410>
+init E= -2.881234568601
+  HOMO = -0.661705257788173  LUMO = 1.12805651427439
+cycle= 1 E= -2.89673564428835  delta_E= -0.0155  |g|= 0.000779  |ddm|= 0.0242
+  HOMO = -0.660635351611744  LUMO = 1.13129214919785
+Extra cycle  E= -2.8967357835387  delta_E= -1.39e-07  |g|= 0.000139  |ddm|= 0.000798
+SCF not converged.
+SCF energy = -2.8967357835387 after 1 cycles
+ iter:   3:1        |ddm|: 4.648261e-03     Tr[DP]  3.159795e-05
+
+******** <class 'pyscf.mcscf.mc1step.CASSCF'> flags ********
+CAS (1e+1e, 2o), ncore = 0, nvir = 3
+max_cycle_macro = 150
+max_cycle_micro = 4
+conv_tol = 1e-07
+conv_tol_grad = None
+orbital rotation max_stepsize = 0.02
+augmented hessian ah_max_cycle = 30
+augmented hessian ah_conv_tol = 1e-12
+augmented hessian ah_linear dependence = 1e-14
+augmented hessian ah_level shift = 0
+augmented hessian ah_start_tol = 2.5
+augmented hessian ah_start_cycle = 3
+augmented hessian ah_grad_trust_region = 3
+kf_trust_region = 3
+kf_interval = 4
+ci_response_space = 4
+ci_grad_trust_region = 3
+with_dep4 0
+natorb = False
+canonicalization = True
+sorting_mo_energy = False
+chkfile = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpfzadxc
+max_memory 4000 MB (current use 82 MB)
+internal_rotation = False
+******** <class 'pyscf.fci.direct_spin1.FCISolver'> flags ********
+max. cycles = 50
+conv_tol = 1e-08
+davidson only = False
+linear dependence = 1e-10
+level shift = 0.001
+max iter space = 12
+max_memory 4000 MB
+nroots = 1
+pspace_size = 400
+spin = None
+CASCI E = -2.86802729372556  S^2 = 0.0000000
+Set conv_tol_grad to 0.000316228
+macro iter 1 (1 JK  1 micro), CASSCF E = -2.86802729372556  dE = 1.3322676e-15  S^2 = 0.0000000
+               |grad[o]|=3.59e-08  |grad[c]|= 1.78796413717e-15  |ddm|=1.04e-13
+1-step CASSCF converged in 1 macro (1 JK 1 micro) steps
+CASSCF canonicalization
+CASSCF energy = -2.86802729372556
+Hartree-Fock Energy:    -2.85304510596549
+CAS Correlation:       -0.01498218776007
+CAS Energy:            -2.86802729372556
+
+========================= Density Matrix Purification ==========================
+
+============================== Compare Densities ===============================
+Delta Density          0.00000467516813
+WF-in-DFT Cycle Errors             0.00063987380745
+
+============================== Embedding Energies ==============================
+Subsystem DFT                -2.89673578353870
+Interaction                  -5.80014858367139
+DFT-in-DFT                   -8.69688436721010
+Supermolecular DFT           -8.69688457466954
+Difference                   -0.00000020745944
+Corrected DFT-in-DFT         -8.69688457466954
+WF-in-DFT                    -8.66817587739695
+Corrected WF-in-DFT          -8.66817608485639
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 4.168115e-08     Tr[DP]  3.223851e-05
+ iter:   2:2        |ddm|: 0.000000e+00     Tr[DP]  3.223851e-05
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 2.475154e-02
+  subiter:   2      |ddm|: 1.050853e-04
+  subiter:   3      |ddm|: 8.003269e-06
+  subiter:   4      |ddm|: 5.964871e-07
+  subiter:   5      |ddm|: 3.756062e-13
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpp5LzkJ
+max_memory 4000 MB (current use 82 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -2.85269328460019
+  HOMO = -0.913057244031471  LUMO = 1.40063214191141
+cycle= 1 E= -2.85269328460019  delta_E= 1.33e-15  |g|= 1.35e-13  |ddm|= 3.69e-13
+  HOMO = -0.913057244031482  LUMO = 1.4006321419114
+Extra cycle  E= -2.85269328460019  delta_E= -8.88e-16  |g|= 1.62e-14  |ddm|= 4.38e-14
+converged SCF energy = -2.85269328460019
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpwcH1kR
+max_memory 4000 MB (current use 82 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x2145578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x2145410>
+init E= -2.88091755510872
+  HOMO = -0.661705258234733  LUMO = 1.12805651647125
+cycle= 1 E= -2.89638405501896  delta_E= -0.0155  |g|= 0.000891  |ddm|= 0.0242
+  HOMO = -0.660459583024888  LUMO = 1.13145067118491
+Extra cycle  E= -2.89638423716581  delta_E= -1.82e-07  |g|= 0.000159  |ddm|= 0.000912
+SCF not converged.
+SCF energy = -2.89638423716581 after 1 cycles
+ iter:   3:1        |ddm|: 4.666866e-03     Tr[DP]  3.160124e-05
+
+******** <class 'pyscf.mcscf.mc1step.CASSCF'> flags ********
+CAS (1e+1e, 2o), ncore = 0, nvir = 3
+max_cycle_macro = 150
+max_cycle_micro = 4
+conv_tol = 1e-07
+conv_tol_grad = None
+orbital rotation max_stepsize = 0.02
+augmented hessian ah_max_cycle = 30
+augmented hessian ah_conv_tol = 1e-12
+augmented hessian ah_linear dependence = 1e-14
+augmented hessian ah_level shift = 0
+augmented hessian ah_start_tol = 2.5
+augmented hessian ah_start_cycle = 3
+augmented hessian ah_grad_trust_region = 3
+kf_trust_region = 3
+kf_interval = 4
+ci_response_space = 4
+ci_grad_trust_region = 3
+with_dep4 0
+natorb = False
+canonicalization = True
+sorting_mo_energy = False
+chkfile = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpp5LzkJ
+max_memory 4000 MB (current use 82 MB)
+internal_rotation = False
+******** <class 'pyscf.fci.direct_spin1.FCISolver'> flags ********
+max. cycles = 50
+conv_tol = 1e-08
+davidson only = False
+linear dependence = 1e-10
+level shift = 0.001
+max iter space = 12
+max_memory 4000 MB
+nroots = 1
+pspace_size = 400
+spin = None
+CASCI E = -2.86767605872184  S^2 = 0.0000000
+Set conv_tol_grad to 0.000316228
+macro iter 1 (1 JK  1 micro), CASSCF E = -2.86767605872184  dE = 1.7763568e-15  S^2 = 0.0000000
+               |grad[o]|=3.59e-08  |grad[c]|= 9.9558695631e-16  |ddm|=3.06e-15
+1-step CASSCF converged in 1 macro (1 JK 1 micro) steps
+CASSCF canonicalization
+CASSCF energy = -2.86767605872184
+Hartree-Fock Energy:    -2.85269328460019
+CAS Correlation:       -0.01498277412165
+CAS Energy:            -2.86767605872184
+
+========================= Density Matrix Purification ==========================
+
+============================== Compare Densities ===============================
+Delta Density          0.00000474880501
+WF-in-DFT Cycle Errors             0.00009282562074
+
+============================== Embedding Energies ==============================
+Subsystem DFT                -2.89638423716581
+Interaction                  -5.80050007260339
+DFT-in-DFT                   -8.69688430976920
+Supermolecular DFT           -8.69688457466954
+Difference                   -0.00000026490034
+Corrected DFT-in-DFT         -8.69688457466954
+WF-in-DFT                    -8.66817613132523
+Corrected WF-in-DFT          -8.66817639622557
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 6.336121e-09     Tr[DP]  3.224171e-05
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 2.476945e-02
+  subiter:   2      |ddm|: 1.105985e-04
+  subiter:   3      |ddm|: 8.426236e-06
+  subiter:   4      |ddm|: 6.246449e-07
+  subiter:   5      |ddm|: 4.145690e-13
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpOIT1B1
+max_memory 4000 MB (current use 82 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -2.85264147751716
+  HOMO = -0.913033786409411  LUMO = 1.40065435163597
+cycle= 1 E= -2.85264147751716  delta_E= 4.44e-16  |g|= 1.43e-13  |ddm|= 3.86e-13
+  HOMO = -0.91303378640941  LUMO = 1.40065435163597
+Extra cycle  E= -2.85264147751716  delta_E=    0  |g|= 1.71e-14  |ddm|= 4.62e-14
+converged SCF energy = -2.85264147751716
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpwcH1kR
+max_memory 4000 MB (current use 82 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x2145578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x2145410>
+init E= -2.88086488861117
+  HOMO = -0.661705257657776  LUMO = 1.12805651710164
+cycle= 1 E= -2.89633228171379  delta_E= -0.0155  |g|= 0.000908  |ddm|= 0.0242
+  HOMO = -0.66043370062891  LUMO = 1.13147487570726
+Extra cycle  E= -2.89633247068201  delta_E= -1.89e-07  |g|= 0.000162  |ddm|= 0.000929
+SCF not converged.
+SCF energy = -2.89633247068201 after 1 cycles
+ iter:   2:1        |ddm|: 4.669611e-03     Tr[DP]  3.160172e-05
+
+******** <class 'pyscf.mcscf.mc1step.CASSCF'> flags ********
+CAS (1e+1e, 2o), ncore = 0, nvir = 3
+max_cycle_macro = 150
+max_cycle_micro = 4
+conv_tol = 1e-07
+conv_tol_grad = None
+orbital rotation max_stepsize = 0.02
+augmented hessian ah_max_cycle = 30
+augmented hessian ah_conv_tol = 1e-12
+augmented hessian ah_linear dependence = 1e-14
+augmented hessian ah_level shift = 0
+augmented hessian ah_start_tol = 2.5
+augmented hessian ah_start_cycle = 3
+augmented hessian ah_grad_trust_region = 3
+kf_trust_region = 3
+kf_interval = 4
+ci_response_space = 4
+ci_grad_trust_region = 3
+with_dep4 0
+natorb = False
+canonicalization = True
+sorting_mo_energy = False
+chkfile = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpOIT1B1
+max_memory 4000 MB (current use 82 MB)
+internal_rotation = False
+******** <class 'pyscf.fci.direct_spin1.FCISolver'> flags ********
+max. cycles = 50
+conv_tol = 1e-08
+davidson only = False
+linear dependence = 1e-10
+level shift = 0.001
+max iter space = 12
+max_memory 4000 MB
+nroots = 1
+pspace_size = 400
+spin = None
+CASCI E = -2.86762433071082  S^2 = 0.0000000
+Set conv_tol_grad to 0.000316228
+macro iter 1 (1 JK  1 micro), CASSCF E = -2.86762433071082  dE = 8.8817842e-16  S^2 = 0.0000000
+               |grad[o]|=3.59e-08  |grad[c]|= 1.35035297906e-15  |ddm|=2.58e-15
+1-step CASSCF converged in 1 macro (1 JK 1 micro) steps
+CASSCF canonicalization
+CASSCF energy = -2.86762433071082
+Hartree-Fock Energy:    -2.85264147751716
+CAS Correlation:       -0.01498285319365
+CAS Energy:            -2.86762433071082
+
+========================= Density Matrix Purification ==========================
+
+============================== Compare Densities ===============================
+Delta Density          0.00000476000030
+WF-in-DFT Cycle Errors             0.00001370331153
+
+============================== Embedding Energies ==============================
+Subsystem DFT                -2.89633247068201
+Interaction                  -5.80055182990812
+DFT-in-DFT                   -8.69688430059012
+Supermolecular DFT           -8.69688457466954
+Difference                   -0.00000027407942
+Corrected DFT-in-DFT         -8.69688457466954
+WF-in-DFT                    -8.66817616061893
+Corrected WF-in-DFT          -8.66817643469835
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 1.001472e-09     Tr[DP]  3.224219e-05
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 2.477209e-02
+  subiter:   2      |ddm|: 1.114127e-04
+  subiter:   3      |ddm|: 8.488723e-06
+  subiter:   4      |ddm|: 6.287759e-07
+  subiter:   5      |ddm|: 3.962095e-13
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmp9wuwcT
+max_memory 4000 MB (current use 82 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -2.85263382825358
+  HOMO = -0.913030322919803  LUMO = 1.40065762859047
+cycle= 1 E= -2.85263382825358  delta_E=    0  |g|= 1.45e-13  |ddm|= 3.93e-13
+  HOMO = -0.913030322919812  LUMO = 1.40065762859046
+Extra cycle  E= -2.85263382825358  delta_E=    0  |g|= 1.73e-14  |ddm|= 4.68e-14
+converged SCF energy = -2.85263382825358
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpwcH1kR
+max_memory 4000 MB (current use 82 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x2145578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x2145410>
+init E= -2.88085712756866
+  HOMO = -0.661705256251471  LUMO = 1.12805651846929
+cycle= 1 E= -2.89632463742715  delta_E= -0.0155  |g|= 0.00091  |ddm|= 0.0242
+  HOMO = -0.660429879360504  LUMO = 1.13147844697495
+Extra cycle  E= -2.89632482741276  delta_E= -1.9e-07  |g|= 0.000162  |ddm|= 0.000932
+SCF not converged.
+SCF energy = -2.89632482741276 after 1 cycles
+ iter:   2:1        |ddm|: 4.670016e-03     Tr[DP]  3.160179e-05
+
+******** <class 'pyscf.mcscf.mc1step.CASSCF'> flags ********
+CAS (1e+1e, 2o), ncore = 0, nvir = 3
+max_cycle_macro = 150
+max_cycle_micro = 4
+conv_tol = 1e-07
+conv_tol_grad = None
+orbital rotation max_stepsize = 0.02
+augmented hessian ah_max_cycle = 30
+augmented hessian ah_conv_tol = 1e-12
+augmented hessian ah_linear dependence = 1e-14
+augmented hessian ah_level shift = 0
+augmented hessian ah_start_tol = 2.5
+augmented hessian ah_start_cycle = 3
+augmented hessian ah_grad_trust_region = 3
+kf_trust_region = 3
+kf_interval = 4
+ci_response_space = 4
+ci_grad_trust_region = 3
+with_dep4 0
+natorb = False
+canonicalization = True
+sorting_mo_energy = False
+chkfile = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmp9wuwcT
+max_memory 4000 MB (current use 82 MB)
+internal_rotation = False
+******** <class 'pyscf.fci.direct_spin1.FCISolver'> flags ********
+max. cycles = 50
+conv_tol = 1e-08
+davidson only = False
+linear dependence = 1e-10
+level shift = 0.001
+max iter space = 12
+max_memory 4000 MB
+nroots = 1
+pspace_size = 400
+spin = None
+CASCI E = -2.86761669314175  S^2 = 0.0000000
+Set conv_tol_grad to 0.000316228
+macro iter 1 (1 JK  1 micro), CASSCF E = -2.86761669314175  dE = -4.4408921e-16  S^2 = 0.0000000
+               |grad[o]|=3.59e-08  |grad[c]|= 4.95113906086e-16  |ddm|=7.02e-16
+1-step CASSCF converged in 1 macro (1 JK 1 micro) steps
+CASSCF canonicalization
+CASSCF energy = -2.86761669314175
+Hartree-Fock Energy:    -2.85263382825358
+CAS Correlation:       -0.01498286488817
+CAS Energy:            -2.86761669314175
+
+========================= Density Matrix Purification ==========================
+
+============================== Compare Densities ===============================
+Delta Density          0.00000476166058
+WF-in-DFT Cycle Errors             0.00000202338942
+
+============================== Embedding Energies ==============================
+Subsystem DFT                -2.89632482741276
+Interaction                  -5.80055947180694
+DFT-in-DFT                   -8.69688429921969
+Supermolecular DFT           -8.69688457466954
+Difference                   -0.00000027544985
+Corrected DFT-in-DFT         -8.69688457466954
+WF-in-DFT                    -8.66817616494868
+Corrected WF-in-DFT          -8.66817644039853
+
+=========================== Starting Freeze-and-Thaw ===========================
+ iter:   1:2        |ddm|: 1.929739e-10     Tr[DP]  3.224226e-05
+                           Freeze-and-Thaw converged!                           
+
+=================== Subsystem 1 at higher mean-field method ====================
+  subiter:   1      |ddm|: 2.477248e-02
+  subiter:   2      |ddm|: 1.115329e-04
+  subiter:   3      |ddm|: 8.497951e-06
+  subiter:   4      |ddm|: 6.293853e-07
+  subiter:   5      |ddm|: 3.972420e-13
+
+
+******** <class 'pyscf.scf.hf.RHF'> flags ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = None
+max. SCF cycles = 300
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpJwyJdy
+max_memory 4000 MB (current use 82 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -2.85263269962193
+  HOMO = -0.913029811890608  LUMO = 1.40065811208842
+cycle= 1 E= -2.85263269962193  delta_E=    0  |g|= 1.45e-13  |ddm|= 3.91e-13
+  HOMO = -0.913029811890612  LUMO = 1.40065811208842
+Extra cycle  E= -2.85263269962193  delta_E= -4.44e-16  |g|= 1.74e-14  |ddm|= 4.67e-14
+converged SCF energy = -2.85263269962193
+
+
+******** <class 'pyscf.dft.rks.RKS'> flags ********
+method = RKS
+initial guess = atom
+damping factor = 0
+level shift factor = 0.0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+DIIS start cycle = 1
+DIIS space = 8
+SCF tol = 1e-09
+SCF gradient tol = 1e-08
+max. SCF cycles = 1
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpwcH1kR
+max_memory 4000 MB (current use 82 MB)
+XC functionals = m06
+small_rho_cutoff = 1e-20
+radial grids: Treutler-Ahlrichs (JCP 102, 346 (M4)) radial grids
+becke partition: Becke, JCP, 88, 2547 (1988)
+pruning grids: <function nwchem_prune at 0x2145578>
+grids dens level: 4
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x2145410>
+init E= -2.88085598238413
+  HOMO = -0.661705256443988  LUMO = 1.12805651828496
+cycle= 1 E= -2.89632350952948  delta_E= -0.0155  |g|= 0.000911  |ddm|= 0.0242
+  HOMO = -0.660429315468715  LUMO = 1.1314789739662
+Extra cycle  E= -2.89632369966556  delta_E= -1.9e-07  |g|= 0.000162  |ddm|= 0.000932
+SCF not converged.
+SCF energy = -2.89632369966556 after 1 cycles
+ iter:   2:1        |ddm|: 4.670076e-03     Tr[DP]  3.160180e-05
+
+******** <class 'pyscf.mcscf.mc1step.CASSCF'> flags ********
+CAS (1e+1e, 2o), ncore = 0, nvir = 3
+max_cycle_macro = 150
+max_cycle_micro = 4
+conv_tol = 1e-07
+conv_tol_grad = None
+orbital rotation max_stepsize = 0.02
+augmented hessian ah_max_cycle = 30
+augmented hessian ah_conv_tol = 1e-12
+augmented hessian ah_linear dependence = 1e-14
+augmented hessian ah_level shift = 0
+augmented hessian ah_start_tol = 2.5
+augmented hessian ah_start_cycle = 3
+augmented hessian ah_grad_trust_region = 3
+kf_trust_region = 3
+kf_interval = 4
+ci_response_space = 4
+ci_grad_trust_region = 3
+with_dep4 0
+natorb = False
+canonicalization = True
+sorting_mo_energy = False
+chkfile = /panfs/roc/groups/13/goodpast/graha682/code/python/freeze_and_thaw/cython/tmpJwyJdy
+max_memory 4000 MB (current use 82 MB)
+internal_rotation = False
+******** <class 'pyscf.fci.direct_spin1.FCISolver'> flags ********
+max. cycles = 50
+conv_tol = 1e-08
+davidson only = False
+linear dependence = 1e-10
+level shift = 0.001
+max iter space = 12
+max_memory 4000 MB
+nroots = 1
+pspace_size = 400
+spin = None
+CASCI E = -2.86761556623569  S^2 = 0.0000000
+Set conv_tol_grad to 0.000316228
+macro iter 1 (1 JK  1 micro), CASSCF E = -2.86761556623569  dE = 8.8817842e-16  S^2 = 0.0000000
+               |grad[o]|=3.59e-08  |grad[c]|= 2.66557549485e-15  |ddm|=2.98e-13
+1-step CASSCF converged in 1 macro (1 JK 1 micro) steps
+CASSCF canonicalization
+CASSCF energy = -2.86761556623569
+Hartree-Fock Energy:    -2.85263269962193
+CAS Correlation:       -0.01498286661376
+CAS Energy:            -2.86761556623569
+
+========================= Density Matrix Purification ==========================
+
+============================== Compare Densities ===============================
+Delta Density          0.00000476190571
+WF-in-DFT Cycle Errors             0.00000029859736
+                          WF-in-DFT cycles converged!                           
+
+============================== Embedding Energies ==============================
+Subsystem DFT                -2.89632369966556
+Interaction                  -5.80056059935158
+DFT-in-DFT                   -8.69688429901714
+Supermolecular DFT           -8.69688457466954
+Difference                   -0.00000027565240
+Corrected DFT-in-DFT         -8.69688457466954
+WF-in-DFT                    -8.66817616558726
+Corrected WF-in-DFT          -8.66817644123966
+
+============================== Embedding Energies ==============================
+Subsystem DFT                -2.88085597968684
+Interaction                  -5.80057853695098
+DFT-in-DFT                   -8.68143451663782
+Supermolecular DFT           -8.69688457466954
+Difference                   -0.01545005803172
+Corrected DFT-in-DFT         -8.69688457466954
+WF-in-DFT                    -8.66819410318667
+Corrected WF-in-DFT          -8.68364416121839
+================================================================================
+TIMING STATISTICS:
+     overlap integrals      0.00s   ( 0.03%)
+    initial subsystems      0.06s   ( 0.43%)
+           2e matrices      4.79s   (32.27%)
+      tot. embed. of 1      6.38s   (43.00%)
+      tot. embed. of 2      0.01s   ( 0.07%)
+       freeze and thaw      6.46s   (43.55%)
+                   cas      0.65s   ( 4.37%)
+  interaction energies      7.57s   (51.01%)
+                   dmp      0.00s   ( 0.00%)
+    density difference      0.03s   ( 0.17%)
+                 TOTAL     14.83s
+================================================================================
+
+********************************************************************************
+*                              END OF CALCULATION                              *
+********************************************************************************

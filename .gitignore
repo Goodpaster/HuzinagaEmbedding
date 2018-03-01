@@ -1,0 +1,5 @@
+# Exclude in development files
+/*
+!/cython
+!.gitignore
+

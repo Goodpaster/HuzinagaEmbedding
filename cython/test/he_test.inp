@@ -1,0 +1,34 @@
+#Test example
+#Helium Dimer
+
+#Subsystem A
+subsystem
+He                 0.0   0.0    0.0
+end
+
+#Subsystem B
+subsystem
+He                 3.0    0.0    0.0
+He                 6.0    0.0    0.0
+end
+
+embed
+ huzfermi
+ cycles 300
+ conv 1e-10
+ #wfguess dft
+ method pbe
+end
+
+basis cc-pVDZ
+method cas[2,2]
+#method ccsd
+#method hf
+grid 4
+compden dft
+conv 1e-10
+grad 1e-8
+maxiter 300
+readchk
+#shift 1.0
+#damp 1.0

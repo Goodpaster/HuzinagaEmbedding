@@ -1,0 +1,25 @@
+Building using script "build.sh"
+
+For Molpro-like calculations:
+* subsystem B must have ghost basis functions for all atoms in subsystem A
+* subsystem A may/may not have ghost basis functions, depending on whether
+  you're performing a basis set truncation
+* use option embed/localize
+* use option embed/freezeb
+* set option embed/cycles 1
+* set option embed/subcycles n (where n > 1)
+
+For "regular" freeze-and-thaw:
+* both subsystems may/may not have ghost basis functions,
+  depending on whether you're performing a basis set truncation
+* remove embed/localize
+* remove embed/freezeb
+* set option embed/cycles n (n > 1)
+* set option embed/subcycles 1
+
+For "absolute localization" freeze-and-thaw
+* make sure there are no ghost basis functions on either subystem
+* remove embed/localize
+* remove embed/freezeb
+* set option embed/cycles n (n > 1)
+* set option embed/subcycles 1 
